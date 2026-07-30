@@ -1,0 +1,11 @@
+export { HeroSection } from './HeroSection';
+export { CategorySection } from './CategorySection';
+export { HowItWorksSection } from './HowItWorksSection';
+export { DesignStudioPreview } from './DesignStudioPreview';
+export { IndustryUseCases } from './IndustryUseCases';
+export { BestSellersSection } from './BestSellersSection';
+export { MaterialsSection } from './MaterialsSection';
+export { SustainabilitySection } from './SustainabilitySection';
+export { TestimonialsSection } from './TestimonialsSection';
+export { FAQSection } from './FAQSection';
+export { FinalCTASection } from './FinalCTASection';

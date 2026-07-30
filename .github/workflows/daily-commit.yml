@@ -1,0 +1,27 @@
+name: Daily Activity
+
+on:
+  schedule:
+    - cron: '0 12 * * *' # Runs at 12:00 UTC every day
+  workflow_dispatch: # Allows manual triggering from the GitHub UI
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Make daily update
+        run: |
+          echo "Last daily commit: $(date)" > .activity-log
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .activity-log
+          git commit -m "chore: daily activity log [skip ci]" || echo "No changes to commit"
+          git push

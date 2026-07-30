@@ -1,0 +1,10 @@
+export { HeroScene } from './HeroScene';
+export { default as PackagingBox } from './PackagingBox';
+export { default as PaperBag } from './PaperBag';
+export { default as CupSleeve } from './CupSleeve';
+export { default as StickerRoll } from './StickerRoll';
+export { default as FoodBox } from './FoodBox';
+export { default as CutlerySleeve } from './CutlerySleeve';
+export { default as FloatingObject } from './FloatingObject';
+export { materials } from './MaterialPresets';
+export type { MaterialName } from './MaterialPresets';
