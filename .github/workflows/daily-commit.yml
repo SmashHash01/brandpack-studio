@@ -20,8 +20,8 @@ jobs:
       - name: Make daily update
         run: |
           echo "Last daily commit: $(date)" > .activity-log
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "Hritik Maheshwari"
+          git config --global user.email "hritikmaheshwari786@gmail.com"
           git add .activity-log
           git commit -m "chore: daily activity log [skip ci]" || echo "No changes to commit"
           git push
